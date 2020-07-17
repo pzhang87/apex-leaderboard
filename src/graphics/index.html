@@ -5,33 +5,77 @@
 	<style>
 		body {
 			font-family: sans-serif;
+      background-color: black;
+      color: white;
 		}
 
 		.monospace {
 			font-family: monospace;
 		}
+
+    #title {
+      font-size: 80px;
+      text-align: center;
+    }
+
+    li > div {
+      display: inline-flex;
+      height: 60px;
+      padding: 1px;
+      margin: 2px;
+      padding-left: 80px;
+    }
+
+    li {
+      height: 60px;
+    }
+
+    ol {
+      margin: 120px;
+      font-size: 36px;
+      column-count: 2;
+      column-gap: 40px;
+      -moz-column-count: 2;
+      -moz-column-gap: 40px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 40px;
+    }
+
+    .team_name {
+      width: 480px;
+    }
+
+    .score {
+      font-size: 24px;
+      text-align: center;
+    }
 	</style>
 </head>
 <body>
-	<p>
-		Hello, I'm one of the graphics in your bundle!
-		I'm where you put the graphics you want to run in your broadcast software!
-	</p>
 
-	<p>To edit me, open "<span id="path" class="monospace"></span>" in your favorite text editor or IDE.</p>
+<div id="title"><h1>STANDINGS</h1></div>
 
-	<p>You can use any libraries, frameworks, and tools you want. There are no limits.</p>
-
-	<p>Visit <a href="https://nodecg.com" target="_blank" rel="noopener">https://nodecg.com</a> for full documentation.</p>
-
-	<p>Have fun!</p>
+<ol id="list">
+</ol>
 
 	<script>
-		document.getElementById('path').textContent = `nodecg${window.location.pathname}`;
+  document.addEventListener("DOMContentLoaded", ()=>{
+    let listReplicant = nodecg.Replicant('listReplicant');
 
-		// You can access the NodeCG api anytime from the `window.nodecg` object
-		// Or just `nodecg` for short. Like this!:
-		nodecg.log.info('Here\'s an example of using NodeCG\'s logging API!');
+    listReplicant.on('change', (newVal, oldVal) => {
+      let listNode = document.getElementById('list')
+      listNode.innerHTML = ''
+
+      let append = ''
+      for (i=0; i<20; i++) {
+        append += '<li><div class="team_name">' + listReplicant.value[i].teamName +
+        '</div><div class="score">' + listReplicant.value[i].score + "</div>"
+      }
+      listNode.innerHTML = append;
+    })
+
+  })
+
 	</script>
 </body>
 </html>
