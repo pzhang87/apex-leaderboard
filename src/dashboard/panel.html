@@ -6,32 +6,214 @@
 		.monospace {
 			font-family: monospace;
 		}
+
+    .row > div {
+      display: inline-flex;
+      justify-content: space-around;
+      text-align: center;
+      padding: 1px;
+      margin: 2px;
+    }
+
+    .column {
+      width: 49%;
+      float: left;
+      border: 1px solid white;
+    }
+
+    .number {
+      width: 20px;
+      text-align: center;
+    }
+
+    .team_name {
+      width: 450px;
+    }
+
+    .team_name > input {
+      width: 100%;
+    }
+
+    .score {
+      width: 25px;
+    }
+
+    .score > input {
+      max-width: 20px;
+      text-align: center;
+    }
 	</style>
 </head>
 <body>
-	<p>
-		Hello, I'm one of the panels in your bundle!
-		I'm where you put your controls.
-	</p>
+  <div class="column">
+    <div class="row">
+      <div class="number">#</div>
+      <div class="team_name">Team Name</div>
+      <div class="score">SC</div>
+    </div>
+    <div class="row item">
+      <div class="number">1</div>
+      <div class="team_name"><input type="text" id="team1" value=""></div>
+      <div class="score"><input type="text" id="score1" value="0"></div>
+    </div>
 
-	<p>To edit me, open "<span id="path" class="monospace"></span>" in your favorite text editor or IDE.</p>
+    <div class="row item">
+      <div class="number">2</div>
+      <div class="team_name"><input type="text" id="team2" value="" ></div>
+      <div class="score"><input type="text" id="score2" value="0" ></div>
+    </div>
 
-	<p>
-		You can use any libraries, frameworks, and tools you want.
-		The only limit of panels is that they cannot render outside of their
-		<span class="monospace">&lt;iframe&gt;</span>'s bounding box.
-	</p>
+    <div class="row item">
+      <div class="number">3</div>
+      <div class="team_name"><input type="text" id="team3" value="" ></div>
+      <div class="score"><input type="text" id="score3" value="0" ></div>
+    </div>
 
-	<p>Visit <a href="https://nodecg.com" target="_blank" rel="noopener">https://nodecg.com</a> for full documentation.</p>
+    <div class="row item">
+      <div class="number">4</div>
+      <div class="team_name"><input type="text" id="team4" value="" ></div>
+      <div class="score"><input type="text" id="score4" value="0" ></div>
+    </div>
 
-	<p>You've got this!</p>
+    <div class="row item">
+      <div class="number">5</div>
+      <div class="team_name"><input type="text" id="team5" value="" ></div>
+      <div class="score"><input type="text" id="score5" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">6</div>
+      <div class="team_name"><input type="text" id="team6" value="" ></div>
+      <div class="score"><input type="text" id="score6" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">7</div>
+      <div class="team_name"><input type="text" id="team7" value=""></div>
+      <div class="score"><input type="text" id="score7" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">8</div>
+      <div class="team_name"><input type="text" id="team8" value="" ></div>
+      <div class="score"><input type="text" id="score8" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">9</div>
+      <div class="team_name"><input type="text" id="team9" value="" ></div>
+      <div class="score"><input type="text" id="score9" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">10</div>
+      <div class="team_name"><input type="text" id="team10" value="" ></div>
+      <div class="score"><input type="text" id="score10" value="0" ></div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="row">
+      <div class="number">#</div>
+      <div class="team_name">Team Name</div>
+      <div class="score">SC</div>
+    </div>
+
+    <div class="row item">
+      <div class="number">11</div>
+      <div class="team_name"><input type="text" id="team11" value="" ></div>
+      <div class="score"><input type="text" id="score11" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">12</div>
+      <div class="team_name"><input type="text" id="team12" value="" ></div>
+      <div class="score"><input type="text" id="score12" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">13</div>
+      <div class="team_name"><input type="text" id="team13" value="" ></div>
+      <div class="score"><input type="text" id="score13" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">14</div>
+      <div class="team_name"><input type="text" id="team14" value="" ></div>
+      <div class="score"><input type="text" id="score14" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">15</div>
+      <div class="team_name"><input type="text" id="team11" value="" ></div>
+      <div class="score"><input type="text" id="score15" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">16</div>
+      <div class="team_name"><input type="text" id="team16" value="" ></div>
+      <div class="score"><input type="text" id="score16" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">17</div>
+      <div class="team_name"><input type="text" id="team17" value="" ></div>
+      <div class="score"><input type="text" id="score17" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">18</div>
+      <div class="team_name"><input type="text" id="team18" value="" ></div>
+      <div class="score"><input type="text" id="score18" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">19</div>
+      <div class="team_name"><input type="text" id="team19" value="" ></div>
+      <div class="score"><input type="text" id="score19" value="0" ></div>
+    </div>
+
+    <div class="row item">
+      <div class="number">20</div>
+      <div class="team_name"><input type="text" id="team20" value="" ></div>
+      <div class="score"><input type="text" id="score20" value="0" ></div>
+    </div>
+  </div>
+
+  <button id="update" onclick="update()">Update</button>
 
 	<script>
-		document.getElementById('path').textContent = `nodecg${window.location.pathname}`;
+  document.addEventListener("DOMContentLoaded", () => {
 
-		// You can access the NodeCG api anytime from the `window.nodecg` object
-		// Or just `nodecg` for short. Like this!:
-		nodecg.log.info('Here\'s an example of using NodeCG\'s logging API!');
+  let listReplicant = nodecg.Replicant('listReplicant');
+
+  function update(){
+    event.preventDefault();
+    let items = Array.from(document.getElementsByClassName('item'))
+    let arr = items.map( (item) => {
+      return {
+        number: parseInt(item.children[0].innerText),
+        teamName: item.children[1].children[0].value,
+        score: item.children[2].children[0].value
+      }
+    })
+    listReplicant.value = arr;
+    console.log(listReplicant.value);
+  }
+
+  document.getElementById("update").addEventListener("click", update);
+
+  listReplicant.on('change', (newVal, oldVal) => {
+    let items = document.getElementsByClassName('item');
+    console.log(listReplicant.value)
+    for (i=0; i < 20; i++) {
+      items[i].children[1].children[0].value = listReplicant.value[i].teamName
+      items[i].children[2].children[0].value = listReplicant.value[i].score
+    }
+  })
+
+  })
+
 	</script>
 </body>
 </html>
